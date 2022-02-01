@@ -98,12 +98,12 @@ local function craft_craftall(player)
             break
         end
 
-        if has_stamina and stamina.exhaust_player then
+        if uip.has.stamina and stamina.exhaust_player then
             stamina.exhaust_player(player, stamina.settings.exhaust_craft, stamina.exhaustion_reasons.craft)
         end
 
         -- support skyblock quests
-        if has_skyblock then
+        if uip.has.skyblock then
             -- track crafting, mimic minetest.register_on_craft as it's bypassed using this function ;)
             skyblock.feats.on_craft(expected_result, player)
         end
